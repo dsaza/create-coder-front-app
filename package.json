@@ -1,0 +1,24 @@
+{
+	"name": "create-coder-front-app",
+	"version": "1.0.0",
+	"license": "MIT",
+	"author": "Dayron Daza",
+	"main": "index.js",
+	"engines": {
+		"npm": ">=8.19.2",
+		"node": ">=16.18.0"
+	},
+	"bin": {
+		"create-coder-front-app": "bin/create-coder-front-app.js"
+	},
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dsaza/create-coder-front-app.git"
+	},
+	"bugs": {
+		"url": "https://github.com/dsaza/create-coder-front-app/issues"
+	},
+	"homepage": "https://github.com/dsaza/create-coder-front-app/tree/main/#readme",
+	"dependencies": {}
+}
