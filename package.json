@@ -1,6 +1,6 @@
 {
 	"name": "create-coder-front-app",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"license": "MIT",
 	"author": "Dayron Daza",
 	"main": "index.js",
@@ -20,5 +20,9 @@
 		"url": "https://github.com/dsaza/create-coder-front-app/issues"
 	},
 	"homepage": "https://github.com/dsaza/create-coder-front-app/tree/main/#readme",
-	"dependencies": {}
+	"dependencies": {
+		"fs-extra": "11.1.0",
+		"inquirer": "9.1.4",
+		"picocolors": "1.0.0"
+	}
 }
