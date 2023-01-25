@@ -1,0 +1,61 @@
+@use '../config/breakpoints.scss' as breakpoints;
+
+@mixin media-min-width($width) {
+	@media (min-width: #{$width}px) {
+		@content;
+	}
+}
+
+@mixin media-max-width($width) {
+	@media (max-width: #{$width}px) {
+		@content;
+	}
+}
+
+@mixin media-min-height($height) {
+	@media (min-height: #{$height}) {
+		@content;
+	}
+}
+
+@mixin media-max-height($height) {
+	@media (max-height: #{$height}) {
+		@content;
+	}
+}
+
+@mixin media-break-up($breakpoint-input) {
+	$errors: 0;
+
+	@each $breakpoint-name, $breakpoint-value in breakpoints.$breaks {
+		@if $breakpoint-name == $breakpoint-input {
+			$errors: $errors + 1;
+
+			@media (min-width: #{$breakpoint-value}) {
+				@content;
+			}
+		}
+	}
+
+	@if $errors == 0 {
+		@error "Breakpoint not found '#{$breakpoint-input}'";
+	}
+}
+
+@mixin media-break-down($breakpoint-input) {
+	$errors: 0;
+
+	@each $breakpoint-name, $breakpoint-value in breakpoints.$breaks {
+		@if $breakpoint-name == $breakpoint-input {
+			$errors: $errors + 1;
+
+			@media (max-width: #{$breakpoint-value - 1px}) {
+				@content;
+			}
+		}
+	}
+
+	@if $errors == 0 {
+		@error "Breakpoint not found '#{$breakpoint-input}'";
+	}
+}

@@ -1,0 +1,11 @@
+@mixin icon($index) {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	content: icon_hex($index);
+	font-family: ci-icons !important;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal !important;
+	line-height: 1;
+	text-transform: none;
+}

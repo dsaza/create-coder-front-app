@@ -1,0 +1,12 @@
+{% extends "../layouts/default.twig" %}
+{% from "../components/card.twig" import card %}
+
+{% block content %}
+
+{% call card(1, 2) -%}
+
+<div id="card-counter"></div>
+
+{%- endcall %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "ci-icons";
+    src: url("./ci-icons.woff?fe2647143838f9b204af58f1c705a683") format("woff"),
+url("./ci-icons.woff2?fe2647143838f9b204af58f1c705a683") format("woff2");
+}
+
+[class^="ci--"]:before, [class*=" ci--"]:before {
+    font-family: ci-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ci--code-labs:before {
+    content: "\e000";
+}

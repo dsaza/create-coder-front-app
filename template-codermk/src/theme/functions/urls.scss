@@ -1,0 +1,3 @@
+@function static_url($url) {
+	@return url(get_static_init() + $url);
+}

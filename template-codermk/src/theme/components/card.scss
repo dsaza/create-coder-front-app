@@ -1,0 +1,65 @@
+@use '../config/colors.scss' as colors;
+
+.card {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	&__wrapper {
+		width: 100%;
+		max-width: rempi(600);
+		padding: 0 rempi(30);
+	}
+	
+	&__content {
+		box-shadow: 0 4px 10px rgba(0,0,0,.1);
+		border: 1px solid #e7e7e7;
+		padding: rempi(30);
+		border-radius: rempi(20);
+		background: colors.$white;
+
+		& > h1 {
+			color: colors.$primary;
+			text-align: center;
+			font-size: rempi(30);
+			font-weight: bold;
+			margin-bottom: rempi(40);
+			letter-spacing: 8px;
+		}
+
+		& > p {
+			text-align: right;
+			font-size: rempi(15);
+			color: colors.$primary;
+
+			a {
+				text-decoration: underline;
+			}
+
+			span {
+				font-size: rempi(30);
+				position: relative;
+				top: 5px;
+			}
+		}
+
+		#card-counter {
+			display: flex;
+			justify-content: center;
+			gap: rempi(30);
+			align-items: center;
+			margin-bottom: rempi(30);
+
+			button {
+				background: #ebebeb;
+				padding: rempi(7) rempi(20);
+				border-radius: rempi(5);
+			}
+
+			span {
+				font-size: rempi(30);
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+{
+	"port": 2220,
+	"buildPath": "./build",
+	"bustcacheEnabled": false
+}

@@ -1,0 +1,20 @@
+@mixin scrollbar($color-bar, $color-bgr, $size: rempi(10)) {
+	scrollbar-color: $color-bar $color-bgr;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: $size;
+		height: $size;
+	}
+
+	&::-webkit-scrollbar-track-piece {
+		background-color: $color-bgr;
+		border-radius: rempi(4);
+		border: rempi(1) solid $color-bgr;
+	}
+
+	&::-webkit-scrollbar-thumb:vertical {
+		background-color: $color-bar;
+		border-radius: rempi(4);
+	}
+}
