@@ -28,7 +28,7 @@ async function main() {
 		return
 	}
 
-	printSuccess(`The project "${nameProject}" was successfully created`)
+	printSuccess(`The project "${nameProject}" was successfully created. Now run:`)
 	printCommands(nameProject)
 }
 
