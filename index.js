@@ -20,7 +20,7 @@ async function main() {
 	const optionsTypeProject = await promptTypeProject()
 	const { typeProject } = optionsTypeProject
 
-	const copySuccess = templateCopyists(typeProject, pathProject)
+	const copySuccess = templateCopyists(typeProject, pathProject, nameProject)
 
 	if (!copySuccess) {
 		printError(`The project "${nameProject}" was not created`)
