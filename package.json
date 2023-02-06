@@ -1,6 +1,6 @@
 {
 	"name": "create-coder-front-app",
-	"version": "0.6.2",
+	"version": "0.9.0",
 	"license": "MIT",
 	"author": "Dayron Daza",
 	"main": "index.js",
