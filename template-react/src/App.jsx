@@ -1,33 +1,33 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0)
 
-  return (
-    <div className='flex h-screen flex-col justify-center items-center'>
-      <div className='flex items-center gap-8 mb-8'>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src='./vite.svg' className='w-[80px]' alt='Vite logo' />
-        </a>
-        <a href='https://reactjs.org' target='_blank'>
-          <img src={reactLogo} className='w-[80px]' alt='React logo' />
-        </a>
-      </div>
-      <h1 className='font-bold text-2xl mb-8'>Vite + React</h1>
-      <div className='mb-8 text-center'>
-        <button className='bg-sky-600 text-white font-semibold px-5 py-2 rounded-md' onClick={() => setCount((count) => count + 1)}>
-          Count is {count}
-        </button>
-        <p className='mt-4 text-gray-500'>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='text-gray-700'>
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+	return (
+		<div className='flex justify-center items-center h-screen text-center'>
+			<div className='min-w-[320px]'>
+				<div className='flex justify-center'>
+					<a href='https://vitejs.dev' className='h-auto w-auto p-6' target='_blank'>
+						<img src='/vite.svg' className='w-auto h-24 object-contain' alt='Vite logo' />
+					</a>
+					<a href='https://reactjs.org' className='h-auto w-auto p-6' target='_blank'>
+						<img src={reactLogo} className='w-auto h-24 object-contain' alt='React logo' />
+					</a>
+				</div>
+				<h1 className='text-5xl text-white font-bold my-8'>Vite + React</h1>
+				<div className='p-8'>
+					<button onClick={() => setCount((count) => count + 1)} className='rounded-lg border border-transparent py-2 px-5 bg-gray-900 text-white hover:border-purple-700'>
+						count is {count}
+					</button>
+					<p className='my-4 text-white'>
+						Edit <code className='text-xs'>src/App.jsx</code> and save to test HMR
+					</p>
+				</div>
+				<p className='my-4 text-gray-500'>
+					Click on the Vite and React logos to learn more
+				</p>
+			</div>
+		</div>
   )
 }
-
-export default App
