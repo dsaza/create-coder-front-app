@@ -2,7 +2,7 @@
 .tmp
 .codermk
 build
-static
+public
 
 node_modules
 pnpm-lock.yaml
