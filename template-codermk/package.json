@@ -9,7 +9,7 @@
 		"prettier": "prettier --write ."
 	},
 	"devDependencies": {
-		"codermk": "1.1.0",
+		"codermk": "1.1.1",
 		"fantasticon": "1.2.3",
 		"prettier": "2.8.1"
 	}
