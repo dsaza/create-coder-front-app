@@ -1,8 +1,11 @@
 export function mkStore() {
-	let mkdata = __mkdata
+	const mkdata = __mkdata
+	const mode = __mode
+
 	return {
-		getMkData() {
-			return mkdata
-		}
+		getMkData: () => mkdata,
+		getMode: () => mode,
+		isProduction: () => mode === 'production',
+		isDevelopment: () => mode === 'development',
 	}
 }
