@@ -1,18 +1,18 @@
 @use '../config/colors.scss' as colors;
 
-.card {
+.Card {
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	
-	&__wrapper {
+	&-wrapper {
 		width: 100%;
 		max-width: rempi(600);
 		padding: 0 rempi(30);
 	}
 	
-	&__content {
+	&-content {
 		box-shadow: 0 4px 10px rgba(0,0,0,.1);
 		border: 1px solid #e7e7e7;
 		padding: rempi(30);
@@ -34,7 +34,15 @@
 			color: colors.$primary;
 
 			a {
-				text-decoration: underline;
+				text-decoration: none;
+				border: rempi(1) solid colors.$primary;
+				padding: rempi(5) rempi(14);
+				font-weight: bold;
+				border-radius: rempi(8);
+
+				&:hover {
+					background-color: rgba(colors.$primary, .1);
+				}
 			}
 
 			span {
@@ -43,23 +51,34 @@
 				top: 5px;
 			}
 		}
+	}
 
-		#card-counter {
-			display: flex;
-			justify-content: center;
-			gap: rempi(30);
-			align-items: center;
-			margin-bottom: rempi(30);
+	&-counter {
+		display: flex;
+		justify-content: center;
+		gap: rempi(30);
+		align-items: center;
+		margin-bottom: rempi(30);
 
-			button {
-				background: #ebebeb;
-				padding: rempi(7) rempi(20);
-				border-radius: rempi(5);
+		button {
+			background: #ebebeb;
+			padding: rempi(7) rempi(20);
+			border-radius: rempi(5);
+			border: rempi(1) solid  transparent;
+			width: 100px;
+			font-weight: 500;
+
+			&:hover {
+				border-color: colors.$primary;
 			}
+		}
 
-			span {
-				font-size: rempi(30);
-			}
+		span {
+			font-size: rempi(30);
+			font-weight: bold;
+			color: #525252;
+			width: rempi(100);
+			text-align: center;
 		}
 	}
 }

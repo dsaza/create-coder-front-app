@@ -5,7 +5,7 @@ module.exports = {
 	name: 'ci-icons',
 
 	inputDir: join(__dirname, './src/icons'),
-	outputDir: join(__dirname, './public/icons/ci-icons'),
+	outputDir: join(__dirname, './public/icons'),
 
 	fontTypes: ['woff', 'woff2'],
 	assetTypes: ['css'],
